@@ -1,5 +1,5 @@
 ---
-title: ERNIE ViLG
+title: ERNIE-ViLG
 emoji: 📉
 colorFrom: yellow
 colorTo: pink
