@@ -116,45 +116,25 @@ with block:
                   align-items: center;
                   gap: 0.8rem;
                   font-size: 1.75rem;
+                  margin-bottom: 10px;
+                  justify-content: center;
                 "
               >
-                <svg
-                  width="0.65em"
-                  height="0.65em"
-                  viewBox="0 0 115 115"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect width="23" height="23" fill="white"></rect>
-                  <rect y="69" width="23" height="23" fill="white"></rect>
-                  <rect x="23" width="23" height="23" fill="#AEAEAE"></rect>
-                  <rect x="23" y="69" width="23" height="23" fill="#AEAEAE"></rect>
-                  <rect x="46" width="23" height="23" fill="white"></rect>
-                  <rect x="46" y="69" width="23" height="23" fill="white"></rect>
-                  <rect x="69" width="23" height="23" fill="black"></rect>
-                  <rect x="69" y="69" width="23" height="23" fill="black"></rect>
-                  <rect x="92" width="23" height="23" fill="#D9D9D9"></rect>
-                  <rect x="92" y="69" width="23" height="23" fill="#AEAEAE"></rect>
-                  <rect x="115" y="46" width="23" height="23" fill="white"></rect>
-                  <rect x="115" y="115" width="23" height="23" fill="white"></rect>
-                  <rect x="115" y="69" width="23" height="23" fill="#D9D9D9"></rect>
-                  <rect x="92" y="46" width="23" height="23" fill="#AEAEAE"></rect>
-                  <rect x="92" y="115" width="23" height="23" fill="#AEAEAE"></rect>
-                  <rect x="92" y="69" width="23" height="23" fill="white"></rect>
-                  <rect x="69" y="46" width="23" height="23" fill="white"></rect>
-                  <rect x="69" y="115" width="23" height="23" fill="white"></rect>
-                  <rect x="69" y="69" width="23" height="23" fill="#D9D9D9"></rect>
-                  <rect x="46" y="46" width="23" height="23" fill="black"></rect>
-                  <rect x="46" y="115" width="23" height="23" fill="black"></rect>
-                  <rect x="46" y="69" width="23" height="23" fill="black"></rect>
-                  <rect x="23" y="46" width="23" height="23" fill="#D9D9D9"></rect>
-                  <rect x="23" y="115" width="23" height="23" fill="#AEAEAE"></rect>
-                  <rect x="23" y="69" width="23" height="23" fill="black"></rect>
-                </svg>
-                <h1 style="font-weight: 900; margin-bottom: 7px;">
+              <img src="https://user-images.githubusercontent.com/22424850/187387422-f6c9ccab-7fda-416e-a24d-7d6084c46f67.jpg" alt="Paddlehub" width="40%">
+              </div> 
+              <div
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 0.8rem;
+                  font-size: 1.75rem;
+                  margin-bottom: 10px;
+                  justify-content: center;
+                ">
+              <h1 style="font-weight: 900; margin-bottom: 7px;">
                   ERNIE-ViLG Demo
-                </h1>
-              </div>
+              </h1>
+              </div> 
               <p style="margin-bottom: 10px; font-size: 94%">
                 ERNIE-ViLG is a state-of-the-art text-to-image model that generates
                 images from Chinese text.
