@@ -8,7 +8,7 @@ model = hub.Module(name='ernie_vilg')
     
 def inference(text_prompts, style):
   results = model.generate_image(
-      text_prompts=text_prompts, style=style)
+      text_prompts=text_prompts, style=style, visualization=False)
   return results[:6]
 
 
@@ -159,7 +159,7 @@ with block:
                     margin=False,
                     rounded=(False, True, True, False),
                 )
-        styles = gr.Dropdown(label="style", choices=['水彩','油画', '粉笔画', '卡通', '蜡笔画', '儿童画'], value='油画')
+        styles = gr.Dropdown(label="style", choices=['水彩','油画', '粉笔画', '卡通', '蜡笔画', '儿童画', '探索无限'], value='油画')
         gallery = gr.Gallery(
             label="Generated images", show_label=False, elem_id="gallery"
         ).style(grid=[2, 3], height="auto")
@@ -178,15 +178,15 @@ with block:
                 <div class="prompt">
                     <p><h4>Prompt公式</h4>
                     <span> Prompt = [形容词] [主语] ，[细节设定]， [修饰语或者艺术家]。 </span>
-                    关于各部分的构造方式和效果，可以参考<a href="https://github.com/OleNet/YouPromptMe/blob/gh-pages/you-prompt-me/README.md" style="text-decoration: underline;" target="_blank">YouPromptMe指南</a>。
+                    关于各部分的构造方式和效果，可以参考<a href="https://github.com/PaddlePaddle/PaddleHub/tree/develop/modules/image/text_to_image/ernie_vilg#六-prompt-指南" style="text-decoration: underline;" target="_blank">YouPromptMe指南</a>。
                     </p>   
                </div>
                 <div class="footer">
-                    <p>Model by <a href="https://wenxin.baidu.com" style="text-decoration: underline;" target="_blank">文心大模型</a> and <a href="https://github.com/PaddlePaddle/PaddleHub" style="text-decoration: underline;" target="_blank">PaddleHub</a> - Gradio Demo by 🤗 Hugging Face
+                    <p>Model by <a href="https://github.com/PaddlePaddle/PaddleHub" style="text-decoration: underline;" target="_blank">PaddleHub</a> and <a href="https://wenxin.baidu.com" style="text-decoration: underline;" target="_blank">文心大模型</a> - Gradio Demo by 🤗 Hugging Face
                     </p>
                 </div>
                  
            """
         )
 
-block.queue(max_size=20).launch()
+block.queue(max_size=100).launch()
