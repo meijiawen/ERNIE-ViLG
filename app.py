@@ -167,7 +167,7 @@ with block:
         
             
 
-        ex = gr.Examples(examples=examples, fn=inference, inputs=[text, styles], outputs=gallery, cache_examples=True)
+        ex = gr.Examples(examples=examples, fn=inference, inputs=[text, styles], outputs=gallery, cache_examples=False)
         ex.dataset.headers = [""]
 
         
@@ -189,4 +189,4 @@ with block:
            """
         )
 
-block.queue(max_size=100).launch()
+block.queue(max_size=100, concurrency_count=20).launch()
