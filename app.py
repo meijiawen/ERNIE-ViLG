@@ -157,7 +157,7 @@ with block:
               </div>
               <p style="margin-bottom: 10px; font-size: 94%">
                 ERNIE-ViLG is a state-of-the-art text-to-image model that generates
-                images from text.
+                images from Chinese text.
               </p>
             </div>
         """
@@ -169,7 +169,7 @@ with block:
                     label="Prompt (Chinese)",
                     show_label=False,
                     max_lines=1,
-                    placeholder="Enter your prompt",
+                    placeholder="Enter your Chinese prompt",
                 ).style(
                     border=(True, False, True, True),
                     rounded=(True, False, False, True),
@@ -202,11 +202,11 @@ with block:
                     </p>   
                </div>
                 <div class="footer">
-                    <p>Model by 文心大模型<a href="https://wenxin.baidu.com" style="text-decoration: underline;" target="_blank">CompVis</a> and <a href="https://github.com/PaddlePaddle/PaddleHub" style="text-decoration: underline;" target="_blank">PaddleHub</a> - Gradio Demo by 🤗 Hugging Face
+                    <p>Model by <a href="https://wenxin.baidu.com" style="text-decoration: underline;" target="_blank">文心大模型</a> and <a href="https://github.com/PaddlePaddle/PaddleHub" style="text-decoration: underline;" target="_blank">PaddleHub</a> - Gradio Demo by 🤗 Hugging Face
                     </p>
                 </div>
                  
            """
         )
 
-block.queue(max_size=10).launch()
+block.queue(max_size=20).launch()
