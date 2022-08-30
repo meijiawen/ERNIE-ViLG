@@ -189,4 +189,4 @@ with block:
            """
         )
 
-block.launch(enable_queue=False)
+block.queue(concunrrency_count=100).launch()
