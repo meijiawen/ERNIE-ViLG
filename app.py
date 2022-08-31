@@ -163,12 +163,12 @@ with block:
                     margin=False,
                     rounded=(False, True, True, False),
                 )
-        styles = gr.Dropdown(label="style", choices=['水彩','油画', '粉笔画', '卡通', '蜡笔画', '儿童画', '探索无限'], value='油画')
+        styles = gr.Dropdown(label="style（风格）", choices=['水彩','油画', '粉笔画', '卡通', '蜡笔画', '儿童画', '探索无限'], value='油画')
         gallery = gr.Gallery(
             label="Generated images", show_label=False, elem_id="gallery"
         ).style(grid=[2, 3], height="auto")
         status_text = gr.Textbox(
-            label="Process status",
+            label="Process status（处理状态）",
             show_label=True,
             max_lines=1,
             interactive=False
