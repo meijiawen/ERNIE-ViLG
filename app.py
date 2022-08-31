@@ -4,12 +4,16 @@ import paddlehub as hub
 
 
 model = hub.Module(name='ernie_vilg')
-    
-    
+
 def inference(text_prompts, style):
-  results = model.generate_image(
-      text_prompts=text_prompts, style=style, visualization=False)
-  return results[:6]
+  try:
+    results = model.generate_image(
+        text_prompts=text_prompts, style=style, visualization=False)
+    return 'Success', results[:6]
+  except Exception as e:
+    error_text = str(e)
+    return error_text, None
+  return
 
 
 title="ERNIE-ViLG"
@@ -163,16 +167,19 @@ with block:
         gallery = gr.Gallery(
             label="Generated images", show_label=False, elem_id="gallery"
         ).style(grid=[2, 3], height="auto")
+        status_text = gr.Textbox(
+            label="Process status",
+            show_label=True,
+            max_lines=1,
+            interactive=False
+        )
         
-        
-            
-
         ex = gr.Examples(examples=examples, fn=inference, inputs=[text, styles], outputs=gallery, cache_examples=False)
         ex.dataset.headers = [""]
 
         
-        text.submit(inference, inputs=[text, styles], outputs=gallery)
-        btn.click(inference, inputs=[text, styles], outputs=gallery)
+        text.submit(inference, inputs=[text, styles], outputs=[status_text, gallery])
+        btn.click(inference, inputs=[text, styles], outputs=[status_text, gallery])
         gr.HTML(
             """
                 <div class="prompt">
