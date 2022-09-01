@@ -659,4 +659,4 @@ In "Explore infinity" style mode, how the image looks like is totally up to your
         </div>
         ''')
 
-block.launch(enable_queue=False)
+block.queue(concurrency_count=50).launch()
