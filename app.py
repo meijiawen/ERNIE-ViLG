@@ -227,7 +227,7 @@ with block:
                     Besides, you can use free GPU resourses in <a href="https://aistudio.baidu.com/aistudio/projectdetail/4462918", style="text-decoration: underline;" target="_blank"> aistudio </a> to enjoy more cases, have fun. 
                     </p>   
                </div>
-               <img src="https://user-images.githubusercontent.com/22424850/187849103-074cb6d2-a9b4-49a1-b1f0-fc130049769f.png" alt="star Paddlehub" width="100%">
+               <a href="https://github.com/PaddlePaddle/PaddleHub/stargazers"><img src="https://user-images.githubusercontent.com/22424850/187849103-074cb6d2-a9b4-49a1-b1f0-fc130049769f.png" alt="star Paddlehub" width="100%"></a>
                  
            """
         )
