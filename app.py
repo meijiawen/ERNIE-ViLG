@@ -4,9 +4,10 @@ import paddlehub as hub
 
 
 model = hub.Module(name='ernie_vilg')
-
-def inference(text_prompts, style):
+style_list = ['水彩','油画', '粉笔画', '卡通', '蜡笔画', '儿童画', '探索无限']
+def inference(text_prompts, style_indx):
   try:
+    style = style_list[style_indx]
     results = model.generate_image(
         text_prompts=text_prompts, style=style, visualization=False)
     return 'Success', results[:6]
@@ -163,7 +164,7 @@ with block:
                     margin=False,
                     rounded=(False, True, True, False),
                 )
-        styles = gr.Dropdown(label="style（风格）", choices=['水彩','油画', '粉笔画', '卡通', '蜡笔画', '儿童画', '探索无限'], value='油画')
+        styles = gr.Dropdown(label="style（风格）", choices=['水彩(Watercolor)','油画(Oil painting)', '粉笔画(Chalk drawing)', '卡通(Cartoon)', '蜡笔画(Crayon drawing)', '儿童画(Children\'s drawing)', '探索无限(Explore infinity)'], value='探索无限(Explore infinity)', type="index")
         gallery = gr.Gallery(
             label="Generated images", show_label=False, elem_id="gallery"
         ).style(grid=[2, 3], height="auto")
