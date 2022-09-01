@@ -1,6 +1,6 @@
 ---
 title: ERNIE-ViLG
-emoji: 📉
+emoji: 🐼
 colorFrom: yellow
 colorTo: pink
 sdk: gradio
