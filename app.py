@@ -1,6 +1,7 @@
 import numpy as np
 import gradio as gr
 import paddlehub as hub
+import datetime
 
 
 model = hub.Module(name='ernie_vilg')
@@ -9,6 +10,7 @@ language_model = hub.Module(name='baidu_translate')
 style_list = ['水彩','油画', '粉笔画', '卡通', '蜡笔画', '儿童画', '探索无限']
 language_list = ['zh', 'en', 'jp', 'kor']
 def inference(text_prompts, language_indx, style_indx):
+  print(datetime.datetime.now())
   try:
     style = style_list[style_indx]
     if language_indx != 0:
@@ -16,9 +18,11 @@ def inference(text_prompts, language_indx, style_indx):
         text_prompts = language_model.translate(text_prompts, language, 'zh')
     results = model.generate_image(
         text_prompts=text_prompts, style=style, visualization=False)
+    print(datetime.datetime.now())
     return 'Success', results[:6]
   except Exception as e:
     error_text = str(e)
+    print(datetime.datetime.now())
     return error_text, None
   return
 
@@ -665,4 +669,4 @@ In "Explore infinity" style mode, how the image looks like is totally up to your
         </div>
         ''')
 
-block.queue(concurrency_count=500).launch()
+block.queue(concurrency_count=80).launch()
