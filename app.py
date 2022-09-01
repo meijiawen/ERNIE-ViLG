@@ -199,13 +199,13 @@ with block:
                     margin=False,
                     rounded=(False, True, True, False),
                 )
-        language = gr.Dropdown(label="语言(language)", choices=['中文(Chineses)','英文(English)', '日文(Japanese)', '韩文(Korean)'], value='中文(Chineses)', type="index")
-        styles = gr.Dropdown(label="style（风格）", choices=['水彩(Watercolor)','油画(Oil painting)', '粉笔画(Chalk drawing)', '卡通(Cartoon)', '蜡笔画(Crayon drawing)', '儿童画(Children\'s drawing)', '探索无限(Explore infinity)'], value='探索无限(Explore infinity)', type="index")
+        language = gr.Dropdown(label="语言（language）", choices=['中文(Chineses)','英文(English)', '日文(Japanese)', '韩文(Korean)'], value='中文(Chineses)', type="index")
+        styles = gr.Dropdown(label="风格（style）", choices=['水彩(Watercolor)','油画(Oil painting)', '粉笔画(Chalk drawing)', '卡通(Cartoon)', '蜡笔画(Crayon drawing)', '儿童画(Children\'s drawing)', '探索无限(Explore infinity)'], value='探索无限(Explore infinity)', type="index")
         gallery = gr.Gallery(
             label="Generated images", show_label=False, elem_id="gallery"
         ).style(grid=[2, 3], height="auto")
         status_text = gr.Textbox(
-            label="Process status（处理状态）",
+            label="处理状态（Process status）",
             show_label=True,
             max_lines=1,
             interactive=False
