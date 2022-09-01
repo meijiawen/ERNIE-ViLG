@@ -109,42 +109,52 @@ block = gr.Blocks(css=css)
 examples = [
     [
         '戴着眼镜的猫',
+        '中文(Chineses)',
         '油画(Oil painting)'
     ],
     [
         '日落时的城市天际线,史前遗迹风格',
+        '中文(Chineses)',
         '油画(Oil painting)'
     ],
     [
         '一只猫坐在椅子上，戴着一副墨镜, low poly 风格',
+        '中文(Chineses)',
         '卡通(Cartoon)'
     ],
     [
         '一只猫坐在椅子上，戴着一副墨镜,秋天风格',
+        '中文(Chineses)',
         '探索无限(Explore infinity)'
     ],
     [
         '蒙娜丽莎，赛博朋克，宝丽来，33毫米,蒸汽波艺术',
+        '中文(Chineses)',
         '探索无限(Explore infinity)'
     ],
     [
         '一只猫坐在椅子上，戴着一副墨镜,海盗风格',
+        '中文(Chineses)',
         '探索无限(Explore infinity)'
     ],
     [
         '一条由闪电制成的令人敬畏的龙,概念艺术',
+        '中文(Chineses)',
         '探索无限(Explore infinity)'
     ],
     [
         '梵高猫头鹰,蒸汽波艺术',
+        '中文(Chineses)',
         '探索无限(Explore infinity)'
     ],
     [
         '萨尔瓦多·达利描绘古代文明的超现实主义梦幻油画,写实风格',
+        '中文(Chineses)',
         '探索无限(Explore infinity)'
     ],
     [
         '夕阳日落时，阳光落在云层上，海面波涛汹涌，风景，胶片感',
+        '中文(Chineses)',
         '探索无限(Explore infinity)'
     ]
 ]
