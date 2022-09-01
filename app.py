@@ -99,15 +99,15 @@ block = gr.Blocks(css=css)
 examples = [
     [
         '戴着眼镜的猫',
-        '油画'
+        '油画(Oil painting)'
     ],
     [
         '日落时的城市天际线,史前遗迹风格',
-        '油画'
+        '油画(Oil painting)'
     ],
     [
         '一只猫坐在椅子上，戴着一副墨镜, low poly 风格',
-        '卡通'
+        '卡通(Cartoon)'
     ],
 ]
 
