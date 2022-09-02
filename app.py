@@ -5,26 +5,50 @@ import datetime
 
 
 model = hub.Module(name='ernie_vilg')
-language_model = hub.Module(name='baidu_translate')
+language_translation_model = hub.Module(name='baidu_translate')
+language_recognition_model = hub.Module(name='baidu_language_recognition')
 
 style_list = ['水彩','油画', '粉笔画', '卡通', '蜡笔画', '儿童画', '探索无限']
-language_list = ['zh', 'en', 'jp', 'kor']
-def inference(text_prompts, language_indx, style_indx):
+
+tips = {"en": "Tips: The input text will be translated into Chinese for generation", 
+        "jp": "ヒント: 入力テキストは生成のために中国語に翻訳されます", 
+        "kor": "힌트: 입력 텍스트는 생성을 위해 중국어로 번역됩니다"}
+
+count = 0
+
+def translate_language(text_prompts):
+    global count
+    try:
+        count += 1
+        tips_text = None
+        language_code = language_recognition_model.recognize(text_prompts)
+        if language_code != 'zh':
+            text_prompts = language_translation_model.translate(text_prompts, language_code, 'zh')
+    except Exception as e:
+        error_text = str(e)
+        return {status_text:error_text, language_tips_text:gr.update(visible=False)}
+    if language_code in tips:
+        tips_text = tips[language_code]
+    else:
+        tips_text = tips['en']
+    if language_code == 'zh':
+        return {language_tips_text:gr.update(visible=False), translated_language:text_prompts, trigger_component: gr.update(value=count, visible=False)}
+    else:
+        return {language_tips_text:gr.update(visible=True, value=tips_text), translated_language:text_prompts, trigger_component:  gr.update(value=count, visible=False)}
+
+        
+def inference(text_prompts, style_indx):
   print(datetime.datetime.now())
   try:
     style = style_list[style_indx]
-    if language_indx != 0:
-        language = language_list[language_indx]
-        text_prompts = language_model.translate(text_prompts, language, 'zh')
     results = model.generate_image(
         text_prompts=text_prompts, style=style, visualization=False)
-    print(datetime.datetime.now())
-    return 'Success', results[:6]
   except Exception as e:
     error_text = str(e)
     print(datetime.datetime.now())
-    return error_text, None
-  return
+    return {status_text:error_text, gallery:None}
+  print(datetime.datetime.now())
+  return {status_text:'Success', gallery:results[:6]}
 
 
 title="ERNIE-ViLG"
@@ -109,112 +133,90 @@ block = gr.Blocks(css=css)
 examples = [
     [
         '戴着眼镜的猫',
-        '中文(Chinese)',
         '油画(Oil painting)'
     ],
     [
         'A cat with glasses',
-        '英文(English)',
         '油画(Oil painting)'
     ],
     [
         '眼鏡をかけた猫',
-        '日文(Japanese)',
         '油画(Oil painting)'
     ],
     [
         '안경을 쓴 고양이',
-        '韩文(Korean)',
         '油画(Oil painting)'
     ],
     [
         '日落时的城市天际线,史前遗迹风格',
-        '中文(Chinese)',
         '油画(Oil painting)'
     ],
     [
         '一只猫坐在椅子上，戴着一副墨镜, low poly 风格',
-        '中文(Chinese)',
         '卡通(Cartoon)'
     ],
     [
         'A cat sitting on a chair, wearing a pair of sunglasses, low poly style',
-        '英文(English)',
         '油画(Oil painting)'
     ],
     [
         '猫が椅子に座ってサングラスをかけている、low polyスタイル',
-        '日文(Japanese)',
         '油画(Oil painting)'
     ],
     [
         '고양이 한 마리가 의자에 앉아 선글라스를 끼고 low poly 스타일을 하고 있다',
-        '韩文(Korean)',
         '油画(Oil painting)'
     ],
     [
         '一只猫坐在椅子上，戴着一副墨镜,秋天风格',
-        '中文(Chinese)',
         '探索无限(Explore infinity)'
     ],
     [
         '蒙娜丽莎，赛博朋克，宝丽来，33毫米,蒸汽波艺术',
-        '中文(Chinese)',
         '探索无限(Explore infinity)'
     ],
     [
         '一只猫坐在椅子上，戴着一副墨镜,海盗风格',
-        '中文(Chinese)',
         '探索无限(Explore infinity)'
     ],
     [
         '一条由闪电制成的令人敬畏的龙,概念艺术',
-        '中文(Chinese)',
         '探索无限(Explore infinity)'
     ],
     [
         'An awesome dragon made of lightning, conceptual art',
-        '英文(English)',
         '油画(Oil painting)'
     ],
     [
         '稲妻で作られた畏敬の念を抱かせる竜、コンセプトアート',
-        '日文(Japanese)',
         '油画(Oil painting)'
     ],
     [
         '번개로 만든 경외스러운 용, 개념 예술',
-        '韩文(Korean)',
         '油画(Oil painting)'
     ],
     [
         '梵高猫头鹰,蒸汽波艺术',
-        '中文(Chinese)',
         '探索无限(Explore infinity)'
     ],
     [
         '萨尔瓦多·达利描绘古代文明的超现实主义梦幻油画,写实风格',
-        '中文(Chinese)',
         '探索无限(Explore infinity)'
     ],
     [
         '夕阳日落时，阳光落在云层上，海面波涛汹涌，风景，胶片感',
-        '中文(Chinese)',
         '探索无限(Explore infinity)'
     ],
     [
         'Sunset, the sun falls on the clouds, the sea is rough, the scenery is filmy',
-        '英文(English)',
         '油画(Oil painting)'
     ],
     [
         '夕日が沈むと、雲の上に太陽の光が落ち、海面は波が荒く、風景、フィルム感',
-        '日文(Japanese)',
         '油画(Oil painting)'
     ],
     [
         '석양이 질 때 햇빛이 구름 위에 떨어지고, 해수면의 파도가 용솟음치며, 풍경, 필름감',
-        '韩文(Korean)',
         '油画(Oil painting)'
     ],
 ]
@@ -273,7 +275,7 @@ with block:
                     margin=False,
                     rounded=(False, True, True, False),
                 )
-        language = gr.Dropdown(label="Prompt语言(Prompt language)", choices=['中文(Chinese)','英文(English)', '日文(Japanese)', '韩文(Korean)'], value='中文(Chinese)', type="index")
+        language_tips_text = gr.Textbox(label="language tips", show_label=False, visible=False, max_lines=1)
         styles = gr.Dropdown(label="风格(style)", choices=['水彩(Watercolor)','油画(Oil painting)', '粉笔画(Chalk drawing)', '卡通(Cartoon)', '蜡笔画(Crayon drawing)', '儿童画(Children\'s drawing)', '探索无限(Explore infinity)'], value='探索无限(Explore infinity)', type="index")
         gallery = gr.Gallery(
             label="Generated images", show_label=False, elem_id="gallery"
@@ -284,13 +286,16 @@ with block:
             max_lines=1,
             interactive=False
         )
+        trigger_component = gr.Textbox(vaule="", visible=False) # This component is used for triggering inference funtion.
+        translated_language = gr.Textbox(vaule="", visible=False)
         
-        ex = gr.Examples(examples=examples, fn=inference, inputs=[text, language, styles], outputs=gallery, cache_examples=False)
+        ex = gr.Examples(examples=examples, fn=translate_language, inputs=[text], outputs=[language_tips_text, status_text, trigger_component, translated_language], cache_examples=False)
         ex.dataset.headers = [""]
 
         
-        text.submit(inference, inputs=[text, language, styles], outputs=[status_text, gallery])
-        btn.click(inference, inputs=[text, language, styles], outputs=[status_text, gallery])
+        text.submit(translate_language, inputs=[text], outputs=[language_tips_text, status_text, trigger_component, translated_language])
+        btn.click(translate_language, inputs=[text], outputs=[language_tips_text, status_text, trigger_component, translated_language])
+        trigger_component.change(fn=inference, inputs=[translated_language, styles], outputs=[status_text, gallery])
         gr.HTML(
             """
                 <div class="prompt">
