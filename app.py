@@ -109,54 +109,114 @@ block = gr.Blocks(css=css)
 examples = [
     [
         '戴着眼镜的猫',
-        '中文(Chineses)',
+        '中文(Chinese)',
+        '油画(Oil painting)'
+    ],
+    [
+        'A cat with glasses',
+        '英文(English)',
+        '油画(Oil painting)'
+    ],
+    [
+        '眼鏡をかけた猫',
+        '日文(Japanese)',
+        '油画(Oil painting)'
+    ],
+    [
+        '안경을 쓴 고양이',
+        '韩文(Korean)',
         '油画(Oil painting)'
     ],
     [
         '日落时的城市天际线,史前遗迹风格',
-        '中文(Chineses)',
+        '中文(Chinese)',
         '油画(Oil painting)'
     ],
     [
         '一只猫坐在椅子上，戴着一副墨镜, low poly 风格',
-        '中文(Chineses)',
+        '中文(Chinese)',
         '卡通(Cartoon)'
     ],
     [
+        'A cat sitting on a chair, wearing a pair of sunglasses, low poly style',
+        '英文(English)',
+        '油画(Oil painting)'
+    ],
+    [
+        '猫が椅子に座ってサングラスをかけている、low polyスタイル',
+        '日文(Japanese)',
+        '油画(Oil painting)'
+    ],
+    [
+        '고양이 한 마리가 의자에 앉아 선글라스를 끼고 low poly 스타일을 하고 있다',
+        '韩文(Korean)',
+        '油画(Oil painting)'
+    ],
+    [
         '一只猫坐在椅子上，戴着一副墨镜,秋天风格',
-        '中文(Chineses)',
+        '中文(Chinese)',
         '探索无限(Explore infinity)'
     ],
     [
         '蒙娜丽莎，赛博朋克，宝丽来，33毫米,蒸汽波艺术',
-        '中文(Chineses)',
+        '中文(Chinese)',
         '探索无限(Explore infinity)'
     ],
     [
         '一只猫坐在椅子上，戴着一副墨镜,海盗风格',
-        '中文(Chineses)',
+        '中文(Chinese)',
         '探索无限(Explore infinity)'
     ],
     [
         '一条由闪电制成的令人敬畏的龙,概念艺术',
-        '中文(Chineses)',
+        '中文(Chinese)',
         '探索无限(Explore infinity)'
     ],
     [
+        'An awesome dragon made of lightning, conceptual art',
+        '英文(English)',
+        '油画(Oil painting)'
+    ],
+    [
+        '稲妻で作られた畏敬の念を抱かせる竜、コンセプトアート',
+        '日文(Japanese)',
+        '油画(Oil painting)'
+    ],
+    [
+        '번개로 만든 경외스러운 용, 개념 예술',
+        '韩文(Korean)',
+        '油画(Oil painting)'
+    ],
+    [
         '梵高猫头鹰,蒸汽波艺术',
-        '中文(Chineses)',
+        '中文(Chinese)',
         '探索无限(Explore infinity)'
     ],
     [
         '萨尔瓦多·达利描绘古代文明的超现实主义梦幻油画,写实风格',
-        '中文(Chineses)',
+        '中文(Chinese)',
         '探索无限(Explore infinity)'
     ],
     [
         '夕阳日落时，阳光落在云层上，海面波涛汹涌，风景，胶片感',
-        '中文(Chineses)',
+        '中文(Chinese)',
         '探索无限(Explore infinity)'
-    ]
+    ],
+    [
+        'Sunset, the sun falls on the clouds, the sea is rough, the scenery is filmy',
+        '英文(English)',
+        '油画(Oil painting)'
+    ],
+    [
+        '夕日が沈むと、雲の上に太陽の光が落ち、海面は波が荒く、風景、フィルム感',
+        '日文(Japanese)',
+        '油画(Oil painting)'
+    ],
+    [
+        '석양이 질 때 햇빛이 구름 위에 떨어지고, 해수면의 파도가 용솟음치며, 풍경, 필름감',
+        '韩文(Korean)',
+        '油画(Oil painting)'
+    ],
 ]
 
 with block:
@@ -202,7 +262,7 @@ with block:
                     label="Prompt",
                     show_label=False,
                     max_lines=1,
-                    placeholder="Enter your prompt",
+                    placeholder="Enter your prompt, multiple languages are supported now.",
                 ).style(
                     border=(True, False, True, True),
                     rounded=(True, False, False, True),
@@ -213,7 +273,7 @@ with block:
                     margin=False,
                     rounded=(False, True, True, False),
                 )
-        language = gr.Dropdown(label="语言(language)", choices=['中文(Chineses)','英文(English)', '日文(Japanese)', '韩文(Korean)'], value='中文(Chineses)', type="index")
+        language = gr.Dropdown(label="Prompt语言(Prompt language)", choices=['中文(Chinese)','英文(English)', '日文(Japanese)', '韩文(Korean)'], value='中文(Chinese)', type="index")
         styles = gr.Dropdown(label="风格(style)", choices=['水彩(Watercolor)','油画(Oil painting)', '粉笔画(Chalk drawing)', '卡通(Cartoon)', '蜡笔画(Crayon drawing)', '儿童画(Children\'s drawing)', '探索无限(Explore infinity)'], value='探索无限(Explore infinity)', type="index")
         gallery = gr.Gallery(
             label="Generated images", show_label=False, elem_id="gallery"
@@ -669,4 +729,4 @@ In "Explore infinity" style mode, how the image looks like is totally up to your
         </div>
         ''')
 
-block.queue(concurrency_count=48).launch()
+block.queue(concurrency_count=80).launch()
