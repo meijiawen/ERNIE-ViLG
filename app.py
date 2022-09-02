@@ -1,7 +1,6 @@
 import numpy as np
 import gradio as gr
 import paddlehub as hub
-import datetime
 
 
 model = hub.Module(name='ernie_vilg')
@@ -38,16 +37,13 @@ def translate_language(text_prompts):
 
         
 def inference(text_prompts, style_indx):
-  print(datetime.datetime.now())
   try:
     style = style_list[style_indx]
     results = model.generate_image(
         text_prompts=text_prompts, style=style, visualization=False)
   except Exception as e:
     error_text = str(e)
-    print(datetime.datetime.now())
     return {status_text:error_text, gallery:None}
-  print(datetime.datetime.now())
   return {status_text:'Success', gallery:results[:6]}
 
 
