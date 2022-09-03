@@ -285,7 +285,7 @@ with block:
         trigger_component = gr.Textbox(vaule="", visible=False) # This component is used for triggering inference funtion.
         translated_language = gr.Textbox(vaule="", visible=False)
         
-        ex = gr.Examples(examples=examples, fn=translate_language, inputs=[text], outputs=[language_tips_text, status_text, trigger_component, translated_language], cache_examples=False)
+        ex = gr.Examples(examples=examples, fn=translate_language, inputs=[text], outputs=[language_tips_text, status_text, trigger_component, translated_language], cache_examples=True)
         ex.dataset.headers = [""]
 
         
