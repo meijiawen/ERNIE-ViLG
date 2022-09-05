@@ -731,4 +731,4 @@ In "Explore infinity" style mode, how the image looks like is totally up to your
         </div>
         ''')
 
-block.queue(concurrency_count=80).launch()
+block.queue(concurrency_count=128).launch()
