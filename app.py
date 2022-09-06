@@ -224,14 +224,14 @@ with block:
               <div
                 style="
                   display: inline-flex;
-                  align-items: center;
                   gap: 0.8rem;
                   font-size: 1.75rem;
                   margin-bottom: 10px;
+                  margin-left: 220px;
                   justify-content: center;
                 "
               >
-              <img src="https://user-images.githubusercontent.com/22424850/187387422-f6c9ccab-7fda-416e-a24d-7d6084c46f67.jpg" alt="Paddlehub" width="40%">
+              <a href="https://github.com/PaddlePaddle/PaddleHub"><img src="https://user-images.githubusercontent.com/22424850/187387422-f6c9ccab-7fda-416e-a24d-7d6084c46f67.jpg" alt="Paddlehub" width="40%"></a>
               </div> 
               <div
                 style="
@@ -242,14 +242,15 @@ with block:
                   margin-bottom: 10px;
                   justify-content: center;
                 ">
-              <h1 style="font-weight: 900; margin-bottom: 7px;">
+              <a href="https://github.com/PaddlePaddle/PaddleHub"><h1 style="font-weight: 900; margin-bottom: 7px;">
                   ERNIE-ViLG Demo
-              </h1>
+              </h1></a>
               </div> 
               <p style="margin-bottom: 10px; font-size: 94%">
                 ERNIE-ViLG is a state-of-the-art text-to-image model that generates
                 images from Chinese text.
               </p>
+              <a href="https://github.com/PaddlePaddle/PaddleHub"><img src="https://user-images.githubusercontent.com/22424850/188184795-98605a22-9af2-4106-827b-e58548f8892f.png" alt="star Paddlehub" width="100%"></a>
             </div>
         """
     )
@@ -312,8 +313,7 @@ with block:
                     Besides, you can use free GPU resourses in <a href="https://aistudio.baidu.com/aistudio/projectdetail/4462918", style="text-decoration: underline;" target="_blank"> aistudio </a> to enjoy more cases, have fun. 
                     </p>   
                </div>
-               <a href="https://github.com/PaddlePaddle/PaddleHub"><img src="https://user-images.githubusercontent.com/22424850/188184795-98605a22-9af2-4106-827b-e58548f8892f.png" alt="star Paddlehub" width="100%"></a>
-                 
+                
            """
         )
         gr.Markdown(
@@ -359,368 +359,8 @@ In "Explore infinity" style mode, how the image looks like is totally up to your
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 一只猫坐在椅子上，戴着一副墨镜,迷幻风格                      | 日落时的城市天际线,迷幻风格                                  |
 
+### <u>[更多内容...](https://github.com/PaddlePaddle/PaddleHub/blob/develop/modules/image/text_to_image/ernie_vilg/README.md#四-prompt-指南)([Explore more...](https://github.com/PaddlePaddle/PaddleHub/blob/develop/modules/image/text_to_image/ernie_vilg/README.md#四-prompt-指南))</u>
 
-### 赛博朋克风格
-
-| ![00142_003_一只猫坐在椅子上，戴着一副墨镜,赛博朋克风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00142_003_一只猫坐在椅子上，戴着一副墨镜,赛博朋克风格.jpg) | ![00142_000_日落时的城市天际线,赛博朋克风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00142_000_日落时的城市天际线,赛博朋克风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,赛博朋克风格                  | 日落时的城市天际线,赛博朋克风格                              |
-
-
-### 纸箱风格
-
-
-| ![00081_000_一只猫坐在椅子上，戴着一副墨镜,纸箱风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00081_000_一只猫坐在椅子上，戴着一副墨镜,纸箱风格.jpg) | ![00081_000_日落时的城市天际线,纸箱风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00081_000_日落时的城市天际线,纸箱风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,纸箱风格                      | 日落时的城市天际线,纸箱风格                                  |
-
-### 未来主义风格
-
-| ![00083_000_一只猫坐在椅子上，戴着一副墨镜,未来主义风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00083_000_一只猫坐在椅子上，戴着一副墨镜,未来主义风格.jpg) | ![00083_002_日落时的城市天际线,未来主义风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00083_002_日落时的城市天际线,未来主义风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,未来主义风格                  | 一只猫坐在椅子上，戴着一副墨镜,未来主义风格                  |
-
-
-
-###  抽象技术风格
-
-| ![00000_003_一只猫坐在椅子上，戴着一副墨镜, 抽象技术风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00000_003_一只猫坐在椅子上，戴着一副墨镜,抽象技术风格.jpg) | ![00000_004_日落时的城市天际线,抽象技术风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00000_004_日落时的城市天际线,抽象技术风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,抽象技术风格                  | 日落时的城市天际线,抽象技术风格                              |
-
-
-
-
-### 海滩兔风格
-
-
-| ![00049_001_一只猫坐在椅子上，戴着一副墨镜,海滩兔风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00049_001_一只猫坐在椅子上，戴着一副墨镜,海滩兔风格.jpg) | ![00049_003_日落时的城市天际线,海滩兔风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00049_003_日落时的城市天际线,海滩兔风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,海滩兔风格                    | 日落时的城市天际线,海滩兔风格                                |
-
-
-### 粉红公主风格
-
-| ![00038_004_一只猫坐在椅子上，戴着一副墨镜，粉红公主风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00038_004_一只猫坐在椅子上，戴着一副墨镜，粉红公主风格.jpg) | ![00046_004_日落时的城市天际线，粉红公主风格-1](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00046_004_日落时的城市天际线，粉红公主风格-1.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,粉红公主风格                  | 日落时的城市天际线,粉红公主风格                              |
-
-
-### 嬉皮士风格
-
-| ![00275_002_一只猫坐在椅子上，戴着一副墨镜,嬉皮士风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00275_002_一只猫坐在椅子上，戴着一副墨镜,嬉皮士风格.jpg) | ![00275_001_日落时的城市天际线,嬉皮士风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00275_001_日落时的城市天际线,嬉皮士风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,嬉皮士风格                    | 日落时的城市天际线,嬉皮士风格                                |
-
-### 幻象之城风格
-
-| ![00288_000_一只猫坐在椅子上，戴着一副墨镜,幻象之城风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00288_000_一只猫坐在椅子上，戴着一副墨镜,幻象之城风格.jpg) | ![00288_004_日落时的城市天际线,幻象之城风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00288_004_日落时的城市天际线,幻象之城风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,幻象之城风格                  | 日落时的城市天际线,幻象之城风格                              |
-
-
-### 美人鱼风格
-
-| ![00351_002_一只猫坐在椅子上，戴着一副墨镜,美人鱼风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00351_002_一只猫坐在椅子上，戴着一副墨镜,美人鱼风格.jpg) | ![00351_000_日落时的城市天际线,美人鱼风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00351_000_日落时的城市天际线,美人鱼风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,美人鱼风格                    | 日落时的城市天际线,美人鱼风格                                |
-
-
-### 迷宫物语风格
-
-
-| ![00382_005_一只猫坐在椅子上，戴着一副墨镜,迷宫物语风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00382_005_一只猫坐在椅子上，戴着一副墨镜,迷宫物语风格.jpg) | ![00382_000_日落时的城市天际线,迷宫物语风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00382_000_日落时的城市天际线,迷宫物语风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,迷宫物语风格                  | 日落时的城市天际线,迷宫物语风格                              |
-
-### 仙女风格
-
-
-| ![00397_003_一只猫坐在椅子上，戴着一副墨镜,仙女风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00397_003_一只猫坐在椅子上，戴着一副墨镜,仙女风格.jpg) | ![00397_004_日落时的城市天际线,仙女风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00397_004_日落时的城市天际线,仙女风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,仙女风格                      | 日落时的城市天际线,仙女风格                                  |
-
-
-
-
-
-### Low Poly 风格
-
-| ![猫low-poly风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/猫low-poly风格.jpg) | ![sky-line-low-poly](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/sky-line-low-poly.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜, low poly 风格                | 日落时的城市天际线, low-poly                                 |
-
-
-
-
-### 浮世绘风格
-
-| ![00564_001_一只猫坐在椅子上，戴着一副墨镜,浮世绘风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00564_001_一只猫坐在椅子上，戴着一副墨镜,浮世绘风格.jpg) | ![00564_002_日落时的城市天际线,浮世绘风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00564_002_日落时的城市天际线,浮世绘风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,浮世绘风格                    | 日落时的城市天际线,浮世绘风格                                |
-
-### 矢量心风格
-
-| ![00573_001_一只猫坐在椅子上，戴着一副墨镜,矢量心风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00573_001_一只猫坐在椅子上，戴着一副墨镜,矢量心风格.jpg) | ![00573_005_日落时的城市天际线,矢量心风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00573_005_日落时的城市天际线,矢量心风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,矢量心风格                    | 日落时的城市天际线,矢量心风格                                |
-
-
-### 摩托车手风格
-
-
-| ![00051_000_一只猫坐在椅子上，戴着一副墨镜,摩托车手风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00051_000_一只猫坐在椅子上，戴着一副墨镜,摩托车手风格.jpg) | ![日落时的城市天际线,摩托车手风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/日落时的城市天际线,摩托车手风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,摩托车手风格                  | 日落时的城市天际线,摩托车手风格                              |
-
-
-
-### 孟菲斯公司风格
-
-
-| ![00114_001_一只猫坐在椅子上，戴着一副墨镜,孟菲斯公司风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00114_001_一只猫坐在椅子上，戴着一副墨镜,孟菲斯公司风格.jpg) | ![00114_002_日落时的城市天际线,孟菲斯公司风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00114_002_日落时的城市天际线,孟菲斯公司风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,孟菲斯公司风格                | 日落时的城市天际线,孟菲斯公司风格                            |
-
-
-### 泥塑风格
-
-
-| ![一只猫坐在椅子上，戴着一副墨镜, 泥塑风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/一只猫坐在椅子上戴着一副墨镜泥塑风格.jpg) | ![00013_002_日落时的城市天际线, 泥塑](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00013_002_日落时的城市天际线,泥塑.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜, 泥塑风格                     | 日落时的城市天际线, 泥塑风格                                 |
-
-
-
-
-### 苔藓风格
-
-| ![00006_001_一只猫坐在椅子上，戴着一副墨镜，苔藓风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00006_001_一只猫坐在椅子上，戴着一副墨镜，苔藓风格.jpg) | ![00004_004_日落时的城市天际线，苔藓风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00004_004_日落时的城市天际线，苔藓风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,苔藓风格                      | 日落时的城市天际线,苔藓风格                                  |
-
-
-
-### 新浪潮风格
-
-| ![00389_000_一只猫坐在椅子上，戴着一副墨镜,新浪潮风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00389_000_一只猫坐在椅子上，戴着一副墨镜,新浪潮风格.jpg) | ![00389_005_日落时的城市天际线,新浪潮风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00389_005_日落时的城市天际线,新浪潮风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,新浪潮风格                    | 日落时的城市天际线,新浪潮风格                                |
-
-### 嘻哈风格
-
-| ![00274_000_一只猫坐在椅子上，戴着一副墨镜,嘻哈风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00274_000_一只猫坐在椅子上，戴着一副墨镜,嘻哈风格.jpg) | ![00274_005_日落时的城市天际线,嘻哈风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00274_005_日落时的城市天际线,嘻哈风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,嘻哈风格                      | 日落时的城市天际线,嘻哈风格                                  |
-
-### 矢量图
-
-| ![00177_001_一只猫坐在椅子上，戴着一副墨镜, 矢量图](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00177_001_一只猫坐在椅子上戴着一副墨镜矢量图.jpg) | ![00020_002_日落时的城市天际线, 矢量图](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00020_002_日落时的城市天际线矢量图.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜, 矢量图                       | 日落时的城市天际线, 矢量图                                   |
-
-### 铅笔艺术
-
-
-| ![00203_000_一只猫坐在椅子上，戴着一副墨镜, 铅笔艺术](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00203_000_一只猫坐在椅子上戴着一副墨镜铅笔艺术.jpg) | ![00053_000_日落时的城市天际线, 铅笔艺术](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00053_000_日落时的城市天际线铅笔艺术.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜, 铅笔艺术                     | 日落时的城市天际线, 铅笔艺术                                 |
-
-
-###  女巫店风格
-
-| ![00606_001_一只猫坐在椅子上，戴着一副墨镜,女巫店风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00606_001_一只猫坐在椅子上，戴着一副墨镜,女巫店风格.jpg) | ![00606_000_日落时的城市天际线,女巫店风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00606_000_日落时的城市天际线,女巫店风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,女巫店风格                    | 日落时的城市天际线,女巫店风格                                |
-
-
-
-### 4D 建模
-
-
-| ![00230_000_一只猫坐在椅子上，戴着一副墨镜, 4D 建模](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00230_000_一只猫坐在椅子上戴着一副墨镜4D建模.jpg) | ![00082_001_日落时的城市天际线, 4D 建模](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00082_001_日落时的城市天际线4D建模.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜, 4D 建模                      | 日落时的城市天际线, 4D 建模                                  |
-
-
-
-### 水彩墨风格
-
-
-| ![00280_004_一只猫坐在椅子上，戴着一副墨镜, 水彩墨风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00280_004_一只猫坐在椅子上，戴着一副墨镜,水彩墨风格.jpg) | ![00130_004_日落时的城市天际线, 水彩墨风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00130_004_日落时的城市天际线,水彩墨风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜, 水彩墨风格                   | 日落时的城市天际线, 水彩墨风格                               |
-
-
-
-###  酸性精灵风格
-
-| ![00001_004_一只猫坐在椅子上，戴着一副墨镜,酸性精灵风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00001_004_一只猫坐在椅子上，戴着一副墨镜,酸性精灵风格.jpg) | ![00001_004_日落时的城市天际线,酸性精灵风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00001_004_日落时的城市天际线,酸性精灵风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,酸性精灵风格                  | 日落时的城市天际线,酸性精灵风格                              |
-
-
-### 海盗风格
-
-| ![00427_002_一只猫坐在椅子上，戴着一副墨镜,海盗风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00427_002_一只猫坐在椅子上，戴着一副墨镜,海盗风格.jpg) | ![00427_000_日落时的城市天际线,海盗风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00427_000_日落时的城市天际线,海盗风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 日落时的城市天际线,海盗风格                                  | 一只猫坐在椅子上，戴着一副墨镜,海盗风格                      |
-
-
-
-### 古埃及风格
-
-
-| ![00017_005_一只猫坐在椅子上，戴着一副墨镜,古埃及风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00017_005_一只猫坐在椅子上，戴着一副墨镜,古埃及风格.jpg) | ![00017_003_日落时的城市天际线,古埃及风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00017_003_日落时的城市天际线,古埃及风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,古埃及风格                    | 日落时的城市天际线,古埃及风格                                |
-
-### 风帽风格
-
-
-| ![戴着帽子的猫](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/戴着帽子的猫.jpg) | ![戴着帽子的城市](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/戴着帽子的城市.jpg) |
-| --------------------------------------------------------- | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,风帽风格                   | 日落时的城市天际线,风帽风格                                  |
-
-### 装饰艺术风格
-
-
-| ![00029_000_一只猫坐在椅子上，戴着一副墨镜,装饰艺术风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00029_000_一只猫坐在椅子上，戴着一副墨镜,装饰艺术风格.jpg) | ![00029_005_日落时的城市天际线,装饰艺术风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00029_005_日落时的城市天际线,装饰艺术风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,装饰艺术风格                  | 日落时的城市天际线,装饰艺术风格                              |
-
-### 极光风格
-
-
-| ![00035_004_一只猫坐在椅子上，戴着一副墨镜,极光风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00035_004_一只猫坐在椅子上，戴着一副墨镜,极光风格.jpg) | ![00035_003_日落时的城市天际线,极光风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00035_003_日落时的城市天际线,极光风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,极光风格                      | 日落时的城市天际线,极光风格                                  |
-
-###  秋天风格
-
-
-| ![00036_005_一只猫坐在椅子上，戴着一副墨镜,秋天风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00036_005_一只猫坐在椅子上，戴着一副墨镜,秋天风格.jpg) | ![00036_003_日落时的城市天际线,秋天风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00036_003_日落时的城市天际线,秋天风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 日落时的城市天际线,秋天风格                                  | 一只猫坐在椅子上，戴着一副墨镜,秋天风格                      |
-
-### 巴洛克风格
-
-
-| ![00046_002_一只猫坐在椅子上，戴着一副墨镜,巴洛克风格风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00046_002_一只猫坐在椅子上，戴着一副墨镜,巴洛克风格风格.jpg) | ![00046_003_日落时的城市天际线,巴洛克风格风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00046_003_日落时的城市天际线,巴洛克风格风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,巴洛克风格                    | 日落时的城市天际线,巴洛克风格                                |
-
-### 立体主义风格
-
-| ![00128_002_一只猫坐在椅子上，戴着一副墨镜,立体主义风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00128_002_一只猫坐在椅子上，戴着一副墨镜,立体主义风格.jpg) | ![00128_004_日落时的城市天际线,立体主义风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00128_004_日落时的城市天际线,立体主义风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,立体主义风格                  | 日落时的城市天际线,立体主义风格                              |
-
-
-### 黑暗自然主义风格
-
-| ![00147_002_一只猫坐在椅子上，戴着一副墨镜,黑暗自然主义风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00147_002_一只猫坐在椅子上，戴着一副墨镜,黑暗自然主义风格.jpg) | ![00147_004_日落时的城市天际线,黑暗自然主义风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00147_004_日落时的城市天际线,黑暗自然主义风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,黑暗自然主义风格              | 日落时的城市天际线,黑暗自然主义风格                          |
-
-### 表现主义风格
-
-| ![00190_001_一只猫坐在椅子上，戴着一副墨镜,表现主义风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00190_001_一只猫坐在椅子上，戴着一副墨镜,表现主义风格.jpg) | ![00190_000_日落时的城市天际线,表现主义风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00190_000_日落时的城市天际线,表现主义风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,表现主义风格                  | 日落时的城市天际线,表现主义风格                              |
-
-### 野兽派风格
-
-| ![00200_000_一只猫坐在椅子上，戴着一副墨镜,野兽派风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00200_000_一只猫坐在椅子上，戴着一副墨镜,野兽派风格.jpg) | ![00200_002_日落时的城市天际线,野兽派风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00200_002_日落时的城市天际线,野兽派风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,野兽派风格                    | 日落时的城市天际线,野兽派风格                                |
-
-### 鬼魂风格
-
-| ![00226_001_一只猫坐在椅子上，戴着一副墨镜,鬼魂风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00226_001_一只猫坐在椅子上，戴着一副墨镜,鬼魂风格.jpg) | ![00226_002_日落时的城市天际线,鬼魂风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00226_002_日落时的城市天际线,鬼魂风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,鬼魂风格                      | 日落时的城市天际线,鬼魂风格                                  |
-
-### 印象主义风格
-
-| ![00289_000_一只猫坐在椅子上，戴着一副墨镜,印象主义风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00289_000_一只猫坐在椅子上，戴着一副墨镜,印象主义风格.jpg) | ![00289_001_日落时的城市天际线,印象主义风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00289_001_日落时的城市天际线,印象主义风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,印象主义风格                  | 日落时的城市天际线,印象主义风格                              |
-
-### 卡瓦伊风格
-
-| ![00305_001_一只猫坐在椅子上，戴着一副墨镜,卡瓦伊风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00305_001_一只猫坐在椅子上，戴着一副墨镜,卡瓦伊风格.jpg) | ![00305_000_日落时的城市天际线,卡瓦伊风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00305_000_日落时的城市天际线,卡瓦伊风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,卡瓦伊风格                    | 日落时的城市天际线,卡瓦伊风格                                |
-
-### 极简主义风格
-
-| ![00362_004_一只猫坐在椅子上，戴着一副墨镜,极简主义风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00362_004_一只猫坐在椅子上，戴着一副墨镜,极简主义风格.jpg) | ![00362_002_日落时的城市天际线,极简主义风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00362_002_日落时的城市天际线,极简主义风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,极简主义风格                  | 日落时的城市天际线,极简主义风格                              |
-
-### 水井惠郎风格
-
-| ![00364_000_一只猫坐在椅子上，戴着一副墨镜,水井惠郎风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00364_000_一只猫坐在椅子上，戴着一副墨镜,水井惠郎风格.jpg) | ![00364_000_日落时的城市天际线,水井惠郎风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00364_000_日落时的城市天际线,水井惠郎风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,水井惠郎风格                  | 日落时的城市天际线,水井惠郎风格                              |
-
-###  照片写实风格
-
-| ![00423_000_一只猫坐在椅子上，戴着一副墨镜,照片写实风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00423_000_一只猫坐在椅子上，戴着一副墨镜,照片写实风格.jpg) | ![00423_002_日落时的城市天际线,照片写实风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00423_002_日落时的城市天际线,照片写实风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,照片写实风格                  | 日落时的城市天际线,照片写实风格                              |
-
-
-### 像素可爱风格
-
-| ![00428_005_一只猫坐在椅子上，戴着一副墨镜,像素可爱风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00428_005_一只猫坐在椅子上，戴着一副墨镜,像素可爱风格.jpg) | ![00428_005_日落时的城市天际线,像素可爱风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00428_005_日落时的城市天际线,像素可爱风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,像素可爱风格                  | 日落时的城市天际线,像素可爱风格                              |
-
-
-
-### 雨天风格
-
-| ![00067_002_一只猫坐在椅子上，戴着一副墨镜，雨天风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00067_002_一只猫坐在椅子上，戴着一副墨镜，雨天风格.jpg) | ![00050_003_日落时的城市天际线，雨天风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00050_003_日落时的城市天际线，雨天风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 日落时的城市天际线,雨天风格                                  | 一只猫坐在椅子上，戴着一副墨镜,雨天风格                      |
-
-### 湿漉漉的风格
-
-| ![00523_005_一只猫坐在椅子上，戴着一副墨镜,湿漉漉的风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00523_005_一只猫坐在椅子上，戴着一副墨镜,湿漉漉的风格.jpg) | ![00523_001_日落时的城市天际线,湿漉漉的风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00523_001_日落时的城市天际线,湿漉漉的风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,湿漉漉的风格                  | 日落时的城市天际线,湿漉漉的风格                              |
-
-
-### 维京人风格
-
-| ![00577_004_一只猫坐在椅子上，戴着一副墨镜,维京人风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00577_004_一只猫坐在椅子上，戴着一副墨镜,维京人风格.jpg) | ![00577_005_日落时的城市天际线,维京人风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00577_005_日落时的城市天际线,维京人风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,维京人风格                    | 日落时的城市天际线,维京人风格                                |
-
-### 后印象主义
-
-
-| ![一只猫坐在椅子上，戴着一副墨镜,风格：后印象主义](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style/一只猫坐在椅子上，戴着一副墨镜,风格：后印象主义.jpg) | ![日落时的城市天际线, 风格：后印象主义-v2](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style/日落时的城市天际线,风格：后印象主义-v2.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,风格：后印象主义              | 日落时的城市天际线, 风格：后印象主义-v2                      |
-
-### 素人主义
-
-
-| ![一只猫坐在椅子上，戴着一副墨镜,风格：素人主义](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style/一只猫坐在椅子上，戴着一副墨镜,风格：素人主义.jpg) | ![日落时的城市天际线,风格：素人艺术](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style/日落时的城市天际线,风格：素人艺术.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,风格：素人主义                | 日落时的城市天际线, 风格：素人艺术                           |
-
-
-
-### 碎核风格
-
-
-| ![00064_000_一只猫坐在椅子上，戴着一副墨镜,碎核风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00064_000_一只猫坐在椅子上，戴着一副墨镜,碎核风格.jpg) | ![00064_002_日落时的城市天际线,碎核风格](https://raw.githubusercontent.com/OleNet/YouPromptMe/gh-pages/you-prompt-me/images/art-style-1024/00064_002_日落时的城市天际线,碎核风格.jpg) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 一只猫坐在椅子上，戴着一副墨镜,碎核风格                      | 日落时的城市天际线,碎核风格                                  |
 
             """
         )
