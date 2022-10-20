@@ -40,7 +40,7 @@ def translate_language(text_prompts):
 def inference(text_prompts, style_indx, resolution_indx):
   try:
     style = style_list[style_indx]
-    resolution = style_list[resolution_indx]
+    resolution = resolution_list[resolution_indx]
     results = model.generate_image(
         text_prompts=text_prompts, style=style, resolution=resolution, visualization=False)
   except Exception as e:
