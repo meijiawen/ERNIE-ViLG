@@ -7,7 +7,8 @@ model = hub.Module(name='ernie_vilg')
 language_translation_model = hub.Module(name='baidu_translate')
 language_recognition_model = hub.Module(name='baidu_language_recognition')
 
-style_list = ['水彩','油画', '粉笔画', '卡通', '蜡笔画', '儿童画', '探索无限']
+style_list = ['古风', '油画', '水彩', '卡通', '二次元', '浮世绘', '蒸汽波艺术', 'low poly', '像素风格', '概念艺术', '未来主义', '赛博朋克', '写实风格', '洛丽塔风格', '巴洛克风格', '超现实主义', '探索无限']
+resolution_list = ['1024*1024', '1024*1536', '1536*1024']
 
 tips = {"en": "Tips: The input text will be translated into Chinese for generation", 
         "jp": "ヒント: 入力テキストは生成のために中国語に翻訳されます", 
@@ -36,11 +37,12 @@ def translate_language(text_prompts):
         return {language_tips_text:gr.update(visible=True, value=tips_text), translated_language:text_prompts, trigger_component:  gr.update(value=count, visible=False)}
 
         
-def inference(text_prompts, style_indx):
+def inference(text_prompts, style_indx, resolution_indx):
   try:
     style = style_list[style_indx]
+    resolution = style_list[resolution_indx]
     results = model.generate_image(
-        text_prompts=text_prompts, style=style, visualization=False)
+        text_prompts=text_prompts, style=style, resolution=resolution, visualization=False)
   except Exception as e:
     error_text = str(e)
     return {status_text:error_text, gallery:None}
@@ -273,7 +275,11 @@ with block:
                     rounded=(False, True, True, False),
                 )
         language_tips_text = gr.Textbox(label="language tips", show_label=False, visible=False, max_lines=1)
-        styles = gr.Dropdown(label="风格(style)", choices=['水彩(Watercolor)','油画(Oil painting)', '粉笔画(Chalk drawing)', '卡通(Cartoon)', '蜡笔画(Crayon drawing)', '儿童画(Children\'s drawing)', '探索无限(Explore infinity)'], value='探索无限(Explore infinity)', type="index")
+        styles = gr.Dropdown(label="风格(style)", choices=['古风(Ancient Style)', '油画(Oil painting)', '水彩(Watercolor)', 
+        '卡通(Cartoon)', '二次元(Anime)', '浮世绘(Ukiyoe)', '蒸汽波艺术(Vaporwave)', 'low poly', 
+        '像素风格(Pixel Style)', '概念艺术(Conceptual Art)', '未来主义(Futurism)', '赛博朋克(Cyberpunk)', '写实风格(Realistic style)', 
+        '洛丽塔风格(Lolita style)', '巴洛克风格(Baroque style)', '超现实主义(Surrealism)', '探索无限(Explore infinity)'], value='探索无限(Explore infinity)', type="index")
+        resolutions = gr.Dropdown(label="分辨率(resolution)", choices=resolution_list, value='1024*1024', type="index")
         gallery = gr.Gallery(
             label="Generated images", show_label=False, elem_id="gallery"
         ).style(grid=[2, 3], height="auto")
@@ -292,7 +298,7 @@ with block:
         
         text.submit(translate_language, inputs=[text], outputs=[language_tips_text, status_text, trigger_component, translated_language])
         btn.click(translate_language, inputs=[text], outputs=[language_tips_text, status_text, trigger_component, translated_language])
-        trigger_component.change(fn=inference, inputs=[translated_language, styles], outputs=[status_text, gallery])
+        trigger_component.change(fn=inference, inputs=[translated_language, styles, resolutions], outputs=[status_text, gallery])
         gr.HTML(
             """
                 <div class="prompt">
