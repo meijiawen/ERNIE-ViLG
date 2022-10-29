@@ -249,7 +249,7 @@ with block:
               </h1></a>
               </div> 
               <p style="margin-bottom: 10px; font-size: 94%">
-                ERNIE-ViLG is a state-of-the-art text-to-image model that generates
+                ERNIE-ViLG 2.0 is a state-of-the-art text-to-image model that generates
                 images from Chinese text.
               </p>
               <a href="https://github.com/PaddlePaddle/PaddleHub"><img src="https://user-images.githubusercontent.com/22424850/188184795-98605a22-9af2-4106-827b-e58548f8892f.png" alt="star Paddlehub" width="100%"></a>
