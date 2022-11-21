@@ -38,6 +38,7 @@ def translate_language(text_prompts):
         
 def inference(text_prompts, style_indx):
   try:
+    model.token = model._apply_token(model.ak, model.sk)
     style = style_list[style_indx]
     results = model.generate_image(
         text_prompts=text_prompts, style=style, visualization=False)
