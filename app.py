@@ -280,7 +280,7 @@ with block:
         '洛丽塔风格(Lolita style)', '巴洛克风格(Baroque style)', '超现实主义(Surrealism)', '探索无限(Explore infinity)'], value='探索无限(Explore infinity)', type="index")
         gallery = gr.Gallery(
             label="Generated images", show_label=False, elem_id="gallery"
-        ).style(grid=[2, 3], height="auto")
+        ).style(grid=[1, 4], height="auto")
         status_text = gr.Textbox(
             label="处理状态(Process status)",
             show_label=True,
