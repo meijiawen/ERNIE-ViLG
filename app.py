@@ -41,11 +41,11 @@ def inference(text_prompts, style_indx):
     model.token = model._apply_token(model.ak, model.sk)
     style = style_list[style_indx]
     results = model.generate_image(
-        text_prompts=text_prompts, style=style, visualization=False)
+        text_prompts=text_prompts, style=style, visualization=False, topk=4)
   except Exception as e:
     error_text = str(e)
     return {status_text:error_text, gallery:None}
-  return {status_text:'Success', gallery:results[:6]}
+  return {status_text:'Success', gallery:results[:4]}
 
 
 title="ERNIE-ViLG"
